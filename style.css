@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f5f5f5;
+    color: #161616;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 15px 5%;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header h1 span {
+    color: #fe2c55;
+}
+
+header input {
+    max-width: 300px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px;
+    background: #fff;
+}
+
+button {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 16px;
+    background: #fe2c55;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d91e45;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font: inherit;
+}
+
+main {
+    width: 92%;
+    max-width: 650px;
+    margin: 25px auto;
+}
+
+.panel {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.panel h2, .feed-heading {
+    margin-top: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#uploadForm {
+    display: grid;
+    gap: 10px;
+}
+
+#uploadForm label {
+    font-weight: bold;
+}
+
+#uploadForm small {
+    color: #666;
+}
+
+.video-card {
+    background: #fff;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px #00000010;
+}
+
+.video-card video {
+    display: block;
+    width: 100%;
+    max-height: 580px;
+    background: #111;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.video-card h3 {
+    margin-bottom: 5px;
+}
+
+.caption {
+    overflow-wrap: anywhere;
+}
+
+.video-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 12px 0;
+}
+
+.video-actions button {
+    background: #eee;
+    color: #222;
+}
+
+.video-actions button:hover {
+    background: #ddd;
+}
+
+.comment-list {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.comment-form {
+    display: flex;
+    gap: 8px;
+}
+
+.comment-form input {
+    min-width: 0;
+}
+
+.comment-form button {
+    align-self: center;
+}
+
+#message {
+    text-align: center;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header input {
+        max-width: none;
+    }
+
+    nav {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    nav button {
+        padding: 10px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    .panel {
+        padding: 15px;
+    }
+}

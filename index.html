@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Style Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><span>Tik</span>Tok</h1>
+        <input id="searchInput" type="search"
+            placeholder="Search videos or users">
+    </header>
+
+    <nav>
+        <button id="homeButton">🏠 Home</button>
+        <button id="showSignup">👤 Sign Up</button>
+        <button id="showLogin">🔑 Login</button>
+    </nav>
+
+    <main>
+        <!-- Sign Up -->
+        <section id="signupSection" class="panel hidden">
+            <h2>Create Account</h2>
+            <form id="signupForm">
+                <input id="signupName" placeholder="Your name" required>
+                <input id="signupUsername" placeholder="Username" required>
+                <input id="signupPassword" type="password"
+                    placeholder="Password (8 characters minimum)"
+                    minlength="8" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <!-- Login -->
+        <section id="loginSection" class="panel hidden">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input id="loginUsername" placeholder="Username" required>
+                <input id="loginPassword" type="password"
+                    placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Upload video -->
+        <section id="uploadSection" class="panel">
+            <h2>Create a video post</h2>
+            <p id="currentUser">You are browsing as a guest.</p>
+
+            <form id="uploadForm">
+                <label for="videoFile">Choose a video:</label>
+                <input id="videoFile" type="file"
+                    accept="video/*" required>
+
+                <input id="caption" type="text"
+                    placeholder="Write a caption..." maxlength="150">
+
+                <button type="submit">Post Video</button>
+            </form>
+            <small>Demo uploads are temporary and last while this page stays open.</small>
+        </section>
+
+        <!-- Video feed -->
+        <section>
+            <h2 class="feed-heading">For You</h2>
+            <div id="videoFeed"></div>
+        </section>
+
+        <p id="message" role="status" aria-live="polite"></p>
+    </main>
+
+    <footer>
+        <p>My TikTok website project by edel rogito
+    </footer>
+    <input id="caption" placeholder="Write a post...">
+<button onclick="addPost()">Post</button>
+
+<div id="feed"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
